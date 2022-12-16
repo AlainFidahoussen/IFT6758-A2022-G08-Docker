@@ -1,6 +1,8 @@
 import os
 import sys
 
+sys.path.append(os.path.join('..', 'ift6758', 'ift6758', 'client'))
+
 import streamlit as st
 import pandas as pd
 import numpy as np
