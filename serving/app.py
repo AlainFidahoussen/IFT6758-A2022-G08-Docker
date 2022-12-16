@@ -16,8 +16,6 @@ LOG_FILE = os.environ.get("FLASK_LOG", "flask.log")
 MODEL_DIR = os.environ.get("MODEL_DIR", "./comet_models")
 os.makedirs(MODEL_DIR, exist_ok=True)
 
-# http://0.0.0.0:5555/predict
-
 
 @app.before_first_request
 def before_first_request():
