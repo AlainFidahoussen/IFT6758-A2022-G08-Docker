@@ -21,9 +21,9 @@ export COMET_API_KEY=<your key>
 streamlit run app.py --server.port=8892 --server.address=0.0.0.0
 ```
 
-The serving log file is available at the address <a target="_blank" href="http://localhost:8890">.
+The serving log file is available at the address `http://localhost:8890`.
 
-The streamlit service (NHL App) is available at the address <a target="_blank" href="http://localhost:8892">.
+The streamlit service (NHL App) is available at the address `http://localhost:8892`.
 
 ## Run the NHL App with Docker
 The dockers only work on Linux for now (or WSL on Windows).
@@ -44,9 +44,9 @@ Make sure that your `COMET_API_KEY` has been defined before, as mentionned above
 docker-compose config
 ```
 
-The serving log file is available at the address <a target="_blank" href="http://localhost:8890">.
+The serving log file is available at the address `http://localhost:8890`.
 
-The streamlit service (NHL App) is available at the address <a target="_blank" href="http://localhost:8892">.
+The streamlit service (NHL App) is available at the address `http://localhost:8892`.
 
 
 
