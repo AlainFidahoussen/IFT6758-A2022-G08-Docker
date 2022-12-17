@@ -14,7 +14,7 @@ pip install -r requirements.txt
 gunicorn --bind 0.0.0.0:8890 app:app
 ```
 
-In the `streamlit` folder, create a virtual python environment and run the following command:
+In the `streamlit` folder, create a virtual python environment and run the streamlit command:
 ```bash
 pip install -r requirements.txt
 export COMET_API_KEY=<your key>
