@@ -8,13 +8,13 @@ To build and run the dockers, you must define your `COMET_API_KEY` environment v
  - or defining it in a .env file placed on the root directory.
 
 ## Run the NHL App without Docker
-In the `serving` folder, create a virtual python environment and run serving:
+In the root folder, run the following commands:
 ```bash
 pip install -r requirements.txt
 ./run_serving.sh
 ```
 
-In the `streamlit` folder, create a virtual python environment and run the NHL app:
+In the root folder, run the following commands:
 ```bash
 pip install -r requirements.txt
 export COMET_API_KEY=<your key>
