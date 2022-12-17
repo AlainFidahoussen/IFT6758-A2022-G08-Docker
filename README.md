@@ -11,14 +11,14 @@ To build and run the dockers, you must define your `COMET_API_KEY` environment v
 In the `serving` folder, create a virtual python environment and run the gunicorn command:
 ```bash
 pip install -r requirements.txt
-gunicorn --bind 0.0.0.0:8890 app:app
+gunicorn --bind 0.0.0.0:5000 app:app
 ```
 
 In the `streamlit` folder, create a virtual python environment and run the streamlit command:
 ```bash
 pip install -r requirements.txt
 export COMET_API_KEY=<your key>
-streamlit run app.py --server.port=8892 --server.address=0.0.0.0
+streamlit run app.py --server.port=5001 --server.address=0.0.0.0
 ```
 
 The serving log file is available at the address `http://localhost:5000`.
