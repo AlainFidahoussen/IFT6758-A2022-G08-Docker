@@ -34,12 +34,15 @@ To build and run the docker serving, the build.sh and run.sh scripts can be used
 ./run.sh
 ```
 
-To build both the streamlit and serving dockers, the following command, from the root directory, can be used:
+To build both the streamlit and the serving dockers, run the following command from the root directory:
 ```bash
-docker compose up
+docker-compose up
 ```
 
-Make sure that your `COMET_API_KEY` has been defined before, as mentionned above.
+Make sure that your `COMET_API_KEY` has been defined before, as mentionned above. You can check that by running the following command:
+```bash
+docker-compose config
+```
 
 The serving log file is available at the address `http://localhost:8890`.
 
