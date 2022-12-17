@@ -23,7 +23,7 @@ streamlit run app.py --server.port=8892 --server.address=0.0.0.0
 
 The serving log file is available at the address `http://localhost:8890`.
 
-The streamlit service is available at the address `http://localhost:8892`.
+The streamlit service (NHL App) is available at the address `http://localhost:8892`.
 
 ## Run the NHL App with Docker
 The dockers only work on Linux for now (or WSL on Windows).
@@ -46,7 +46,7 @@ docker-compose config
 
 The serving log file is available at the address `http://localhost:8890`.
 
-The streamlit service is available at the address `http://localhost:8892`.
+The streamlit service (NHL App) is available at the address `http://localhost:8892`.
 
 
 
