@@ -8,17 +8,17 @@ To build and run the dockers, you must define your `COMET_API_KEY` environment v
  - or defining it in a .env file placed on the root directory.
 
 ## Run the NHL App without Docker
-In the `serving` folder, create a virtual python environment and run the gunicorn command:
+In the `serving` folder, create a virtual python environment and run serving:
 ```bash
 pip install -r requirements.txt
-./run_gunicorn.sh
+./run_serving.sh
 ```
 
-In the `streamlit` folder, create a virtual python environment and run the streamlit command:
+In the `streamlit` folder, create a virtual python environment and run the NHL app:
 ```bash
 pip install -r requirements.txt
 export COMET_API_KEY=<your key>
-./run_streamlit.sh
+./run_app.sh
 ```
 
 The serving log file is available at the address `http://localhost:5000`.
