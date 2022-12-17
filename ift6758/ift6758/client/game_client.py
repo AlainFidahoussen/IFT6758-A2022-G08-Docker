@@ -13,7 +13,7 @@ import features.build_features as FeaturesManager
 import visualization.visualize as VizManager
 
 IP = os.environ.get("SERVING_IP", "0.0.0.0")
-PORT = os.environ.get("SERVING_PORT", "8890")
+PORT = os.environ.get("SERVING_PORT", "5000")
 
 class GameClient:
     def __init__(self):

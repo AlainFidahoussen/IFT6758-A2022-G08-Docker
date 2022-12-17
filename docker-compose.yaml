@@ -10,7 +10,7 @@ services:
       #   MY_VARIABLE: ???
     image: ift6758/serving:0.0.1
     ports:
-      - "8890:8890"
+      - "5000:5000"
     environment:
       COMET_API_KEY: ${COMET_API_KEY}
 
@@ -20,7 +20,7 @@ services:
       dockerfile: ./Dockerfile.streamlit
     image: ift6758/streamlit:0.0.1
     ports:
-      - "8892:8892"
+      - "5001:5001"
     environment:
       SERVING_IP: "serving"
-      SERVING_PORT: 8890
+      SERVING_PORT: 5000

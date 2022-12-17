@@ -6,12 +6,13 @@ WORKDIR /code
 # # Install codebase
 ADD ./serving ./serving 
 RUN pip install wheel && \ 
+    pip install --upgrade pip && \
     pip install -r serving/requirements.txt
 
 # # Add application
 ADD ./serving/app.py ./app.py
 
-ENV SERVING_PORT=8890
+ENV SERVING_PORT=5000
 EXPOSE ${SERVING_PORT}
 
 CMD gunicorn --bind 0.0.0.0:${SERVING_PORT} --timeout 1000 --workers 1 --threads 4 app:app

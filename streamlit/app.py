@@ -14,7 +14,7 @@ import serving_client
 import game_client
 
 IP = os.environ.get("SERVING_IP", "0.0.0.0")
-PORT = os.environ.get("SERVING_PORT", "8890")
+PORT = os.environ.get("SERVING_PORT", "5000")
 
 st.title("Hockey Visualization App")
 
@@ -31,7 +31,7 @@ with st.sidebar:
         st.session_state['model_downloaded'] = True # Like a dictionary
         sc = serving_client.ServingClient(IP, PORT)
         sc.download_registry_model(workspace, model, version)
-    
+
 
 with st.container():
     # TODO: Add Game ID input
