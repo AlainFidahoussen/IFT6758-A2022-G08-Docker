@@ -1,13 +1,31 @@
 ## Environment variable
 
-To build and run the dockers, you must define your COMET_API_KEY environment variable first, by:
+To build and run the dockers, you must define your `COMET_API_KEY` environment variable first, by:
  - exporting it on the bash prompt: 
 ```bash
  export COMET_API_KEY=<your key>
 ```
  - or defining it in a .env file placed on the root directory.
 
-## Docker
+## Run the NHL App without Docker
+In the `serving` folder, create a virtual python environement and run the gunicorn command:
+```bash
+pip install -r requirements.txt
+gunicorn --bind 0.0.0.0:8890 app:app
+```
+
+In the `streamlit` folder, create a virtual python environement and run the following command:
+```bash
+pip install -r requirements.txt
+export COMET_API_KEY=<your key>
+streamlit run app.py --server.port=8892 --server.address=0.0.0.0
+```
+
+The serving log file is available at the address `http://localhost:8890`.
+
+The streamlit service is available at the address `http://localhost:8892`.
+
+## Run the NHL App with Docker
 The dockers only work on Linux for now (or WSL on Windows).
 
 To build and run the docker serving, the build.sh and run.sh scripts can be used:
@@ -20,6 +38,8 @@ To build both the streamlit and serving dockers, the following command, from the
 ```bash
 docker compose up
 ```
+
+Make sure that your `COMET_API_KEY` has been defined before, as mentionned above.
 
 The serving log file is available at the address `http://localhost:8890`.
 
